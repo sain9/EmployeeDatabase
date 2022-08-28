@@ -1,0 +1,113 @@
+
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Employee Management</h2>
+        </div>
+            
+        <div class="col ml-auto text-right">
+            <button type="button" class="btn btn-outline-success"
+            (click)="onAddEmployee()">
+                <i></i> + Add Employee
+            </button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4" *ngFor="let item of employees">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <li class="card-title">{{item.name}}</li>
+                    <li class="card-subtitle mb-2 text-muted">{{item.position}}</li>
+                    
+                    <button type="button" class="btn btn-outline-primary mr-2 "
+                      >Edit</button>
+                    &nbsp;<button type="button" class="btn btn-outline-danger"
+                        >Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade show" [class.show]="showModal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title">{{editMode?'Update' : 'Add'}}</h5>
+          <button (click)="onCloseModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      
+      <form [formGroup]="empForm" (ngSubmit)="onEmpSubmit()"> 
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Enter Name</label>
+                <input type="text" class="form-control" formControlName="name">
+               
+            </div>
+            
+            <div class="form-group">
+                <label>Enter position</label>
+                <input type="text" class="form-control" formControlName="position">
+                
+            </div>
+           
+        </div>
+        <div class="modal-footer">
+            <button type="button" (click)="onCloseModal()" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+  
+      </div>
+  </div>
+</div>
+
+       
+       
+        <!-- <nav class="navbar navbar-light" >
+            <div id="main" class="container-fluid">
+                <a class="navbar-brand">Employee Management</a>
+            </div>
+          </nav>
+<p class="placeholder-glow">
+     <span class="placeholder col-12"></span> 
+</p>
+<button id="emp" type="button" class="btn btn-outline-dark">+ Add Employee</button>
+
+  // bootstrap card 
+<hr id="card">
+    <div class="row container d-flex justify-content-center" style="width: 20rem;">
+      <div class="col md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+              <h5 class="card-title">Hussain</h5>
+              <h6 class="card-subtitle mb-2 text-muted">full stack development</h6>
+              <span>Success</span>
+              <hr>
+              <button type="button" class="btn btn-outline-primary mr-2">Edit</button>
+             &nbsp; <button type="button" class="btn btn-outline-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+ //model data form
+
+ <div class="model fade show">
+   <div class="model-dialog model-dialog-centered" role="document">
+     <div class="model-content">
+       <div class="model-header">
+         <h5 class="model-title">Add Employee</h5>
+         <button class="close">close</button>
+          <span aria-hidden="true">&times;</span>
+       </div>
+     </div>
+   </div>
+ </div> -->

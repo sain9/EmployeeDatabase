@@ -1,0 +1,15 @@
+<div class="main-div" fxLayoutAlign="center center" fxFlexFill >
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary" fxLayoutAlign="center center" >Profile</mat-toolbar>
+        <form class="profile-form" fxLayoutAlign="stretch" fxLayout="column" [formGroup]="formGroup" (ngSubmit)="profileProcess()">
+          
+            <mat-form-field >
+              <input matInput placeholder="username" formControlName = "email" >
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit">update</button> 
+            <hr> <button mat-raised-button color="accent" type="button" (click)="movetoLogin()">Login</button>
+
+          </form>
+    </mat-card>
+</div>

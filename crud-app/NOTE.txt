@@ -1,0 +1,38 @@
+for installing flex layout
+>npm i -s @angular/flex-layout @angular/cdk
+
+for installing angular material
+>ng add @angular/material
+
+for custom theme
+-----------------
+1-create a file theme.scss in src folder
+2-goto angular.json remove the prebuilt theme indigo pink etc.
+and import your theme.scss in style section as follow :
+
+    "styles": [
+              "src/theme.scss",
+              "src/styles.css"
+              ],
+
+3-come to your theme.scss and import:
+@import "../node_modules/@angular/material/theming";
+
+4-include mat-core function :
+@include mat-core();
+
+5-now create your own color variable as follow:
+$my-primary: mat-palette()
+
+6-but you can not choose color without naming convention
+for choosing color visit :
+ https://mui.com/customization/color/
+
+ 7-set your theme as ligth or dark as shwon below:
+ $my-theme: mat-light-theme($my-primary, $my-accent);
+ 
+ 8-now include your theme as angular-material-theme as follow
+ @include angular-material-theme($my-theme);
+
+ And you are done with theming
+ -----------------------------

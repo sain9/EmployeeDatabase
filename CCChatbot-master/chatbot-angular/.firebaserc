@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "acme-chatbot"
+  },
+  "targets": {
+    "acmedemo-tefspy": {
+      "hosting": {
+        "my-app": [
+          "acmedemo-tefspy"
+        ]
+      }
+    }
+  }
+}

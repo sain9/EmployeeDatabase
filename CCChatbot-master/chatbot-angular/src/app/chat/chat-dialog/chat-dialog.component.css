@@ -1,0 +1,145 @@
+h1,
+h3,
+p,
+hr {
+  margin: 0;
+}
+
+html {
+   font-family: Arial, Helvetica, sans-serif;
+   background: linear-gradient(to right, #57c1eb 0%,#246fa8 100%);
+   font-size: 10px;
+
+}
+.message {
+    font-size: 18px;
+    border-radius: 15px; 
+    margin: 0 15px 10px; /*0 15 10*/
+    padding: 15px;
+    font-weight: bold;
+    
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+  
+    to {
+      opacity: 1.0;
+    }
+}
+.messages {
+    height: 30rem;
+    overflow: auto;
+}
+
+.message.to {
+    
+    background-color: rgba(46, 154, 226, 0.986);
+    color: #fff;
+    margin: 1rem 1rem 1rem 1rem;
+
+    text-align: right;
+    box-shadow: 2.5px 2.5px 2.5px #444;
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+    float: right;
+    padding: 10px 10px;
+    border-radius: 1rem;
+    display:inline-block;
+}
+.message.from {
+    display:inline-block;
+
+    margin: 1rem 1rem 1rem 1rem;
+
+    background-color: white;
+    color: #444;
+    box-shadow: 2.5px 2.5px 2.5px #444;
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+
+    border-radius: 1rem;
+    padding: 10px 10px;
+    margin-bottom: 0.2rem;
+}
+.message.to + .message.to,
+.message.from + .message.from {
+margin-top: -10px;
+}
+
+body {
+   display: flex;
+}
+
+.chat_box {
+    background: lightblue;
+    width: 31rem;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.chat_content {
+    height: 30rem;
+    padding: 1rem;
+}
+
+.chat_heading {
+    color: white;
+    -webkit-text-stroke: 0.3px black;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.chat_header {
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: #363636;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+input{
+    border: 1px rgb(75, 75, 75);
+
+    margin-left: 2px; 
+    width: 85%;
+}
+.btnReload {
+    background-color: rgb(2, 212, 16);
+    border: none;
+	border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+	text-align: center;
+	margin-right: 5px;
+	padding: 2px;
+  }
+    /* Darker background on mouse-over */
+  .btnReload:hover {
+    background-color: seagreen;
+  }
+.btn {
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  } 
+
+  #minimize {
+    position: right;
+    bottom: 50%;
+    outline: none;
+    border:0;
+    border-radius: 20%;
+    padding:0;
+    height: 25px;
+    width: 25px;
+  }
